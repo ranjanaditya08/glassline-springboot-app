@@ -13,6 +13,6 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ApiResponse<?>> resourceNotFoundExceptionHandler(ResourceNotFoundException e){
 
         ApiResponse<?> response = new ApiResponse<>("",e.getMessage(),false);
-        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
 }
